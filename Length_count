@@ -1,0 +1,8 @@
+Count number of lines in a file 
+wc -l test.txt
+Count number of words in a file 
+wc -w text.txt
+Only print the count and no other Information 
+wc -l test.txt | awk '{ print $1 }'
+If wc is not installed : 
+cat -n test.txt
