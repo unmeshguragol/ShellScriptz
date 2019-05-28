@@ -1,1 +1,7 @@
-len=$(wc -l URLs.txt | awk '{print $1}') ; for((i=1;i<-$len;i++));do <CMD>;done 
+We are using the text.txt file as the file with all the links: 
+
+len=$(wc -l test.txt | awk '{print $1}') ; for((i=1;i<-$len;i++));do sed -n $i"p" test.txt|<CMD>;done 
+
+Sample Example: 
+
+len=$(wc -l test.txt | awk '{print $1}') ; for((i=1;i<-$len;i++));do dirb $(sed -n $i"p" test.txt) -o "output"$i.txt | ;done 
