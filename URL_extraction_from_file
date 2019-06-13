@@ -1,0 +1,5 @@
+To get all the URLS from a file : 
+#in Windows
+type URLS.txt | grep -Eo "(https|http)://[a-zA-Z0-9./?=_-]*"
+#in Linux 
+cat URLS.txt | grep -Eo "(https|http)://[a-zA-Z0-9./?=_-]*"
